@@ -1,0 +1,108 @@
+body {
+    font: 14px/16px Arial;
+    color: #fff;
+    background: #1e2225;
+}
+
+/**************************************************************************************/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid #303C49;
+    padding: 5px;
+}
+
+.param-name {
+    color: #7c8b97;
+    background: #262B30;
+    width: 1px;
+    cursor: default;
+}
+
+.param-name:hover {
+    background: #32383e;
+}
+
+.param-name.hidden + td > table {
+    display: none;
+}
+
+.param-name.hidden + td > table {
+    display: none;
+}
+
+.descr {
+    background: #32383e;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 3px;
+    font-family: 'Courier New';
+}
+
+/**************************************************************************************/
+
+.code-title {
+    font-weight: bold;
+    background: #32383e;
+    padding: 5px;
+    margin-top: 10px;
+    display: block;
+    color: #7c8b97;
+}
+
+.code {
+    outline-style: none;
+    border: 3px solid #32383e;
+    margin: 0;
+    padding: 0;
+    font: 14px/14px Consolas;
+    list-style-type: decimal-leading-zero;
+    counter-reset: item;
+    overflow-x: auto;
+    overflow-y: hidden;
+    line-height: 16px;
+
+    position: relative;
+}
+
+.code li {
+    padding: 0;
+}
+
+.code li:before {
+    display: inline-block;
+    content: counter(item);
+    counter-increment: item;
+    padding: 0 10px 0 10px;
+    text-align: right;
+    color: #7c8b97;
+    margin-right: 3px;
+    background: #32383e;
+    width: 20px;
+}
+
+.number {
+    color: #04f;
+}
+
+.comment, .comment * {
+    color: #8a0;
+    font-style: italic;
+}
+
+.comment {
+    position: absolute;
+    left: 350px;
+}
+
+.keyword {
+    font-weight: bold;
+}
+
+#out {
+    margin-top: 20px;
+}
