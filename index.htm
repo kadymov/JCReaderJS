@@ -7,7 +7,11 @@
 <body>
     <h1>JReaderJS</h1>
 
-    <input type="file" id="file" name="file" />
+    <input type="file" id="file" name="file" /><br/>
+
+    <input type="radio" checked="checked" name="viz" id="tableViz"/> As Table
+    <input type="radio" name="viz" id="codeViz" /> As Code
+
     <div id="out"></div>
 
     <script src="js/utils/Helper.js"></script>
@@ -17,8 +21,10 @@
     <script src="js/dataman/ClassReader.js"></script>
     <script src="js/codeman/Instructions.js"></script>
     <script src="js/codeman/Disasembler.js"></script>
+    <script src="js/codeman/Decompiler.js"></script>
     <script src="js/visualizers/Visualizer.js"></script>
     <script src="js/visualizers/TableVisualizer.js"></script>
+    <script src="js/visualizers/CodeVisualizer.js"></script>
     <script src="js/app.js"></script>
 
 

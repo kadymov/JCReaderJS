@@ -60,6 +60,7 @@ table td {
     margin: 0;
     padding: 0;
     font: 14px/14px Consolas;
+    color: #95B5CE;
     list-style-type: decimal-leading-zero;
     counter-reset: item;
     overflow-x: auto;
@@ -86,11 +87,11 @@ table td {
 }
 
 .number {
-    color: #04f;
+    color: #1881EA;
 }
 
 .comment, .comment * {
-    color: #8a0;
+    color: #55972E;
     font-style: italic;
 }
 
@@ -101,6 +102,7 @@ table td {
 
 .keyword {
     font-weight: bold;
+    color: #3F678F;
 }
 
 #out {

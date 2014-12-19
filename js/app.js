@@ -5,16 +5,19 @@
 */
 
 function handleFileSelect(evt) {
-  var reader = new FileReader();
+  var 
+    reader = new FileReader(),
+    isCodeVizulalizer = !!document.getElementById('codeViz').checked;
 
   reader.onload = (function (theFile) {
     return function (e) {
       var
         buffer = e.target.result,
         classReader = new DataManager.ClassReader(buffer),
-        result = classReader.readStructure(DataManager.ClassStructure), vizualizer;
+        result = classReader.readStructure(DataManager.ClassStructure), 
+        vizualizer;
 
-      vizualizer = new Vizualizers.TableVisualizer(result);
+      vizualizer = isCodeVizulalizer ? new Vizualizers.CodeVizualizer(result) : new Vizualizers.TableVisualizer(result);
       document.getElementById('out').innerHTML = vizualizer.vizualize();
     };
   })(evt.target.files[0]);
